@@ -8,7 +8,7 @@ $( document ).ready(function() {
         
 
         
-        $.ajax('https://graph.facebook.com/me/feed?access_token='+myFacebookToken,{ 
+        $.ajax('https://graph.facebook.com/me/feed?access_token='+myFacebookToken,{ //if you want your posts plesse change the link to https://graph.facebook.com/me/post?access_token
                 
                success : function(response){ 
                     console.log(typeof(response)); 
@@ -19,7 +19,7 @@ $( document ).ready(function() {
                                 +  "Created-time:"  + response.data[i].created_time + "<br>" + "Id:" + response.data[i].id + "<br>") 
                            
                            } //for loop totake data from facebook
-                    
+                                                  
                 }, 
                      error : function(request,errorType,errorMessage){ 
                         alert("Please check your console for further details");
