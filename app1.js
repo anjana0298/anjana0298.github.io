@@ -3,7 +3,7 @@ $( document ).ready(function() {
       
       
     var myFacebookToken ='EAACEdEose0cBAPR7mZCYzpoxa2BxcWn8cDtWGg7pQZCC8AwNc4ooGm0yHZCmVcGUAp6PhEL1OwFMX1HyNGlibDXBBZBFxzehsgIgrtYZBcaPwqRncbC6GdlQyLKKZCNgkkbdHPaj7qLv6gBcfJLmTjfgChwMDnX9o8qHlzzXXSi5VMwheCfvddZAgZBa3heJcLMZD'; 
-    
+    //please use a new token
    function getFacebookPost(){ 
         
 
@@ -12,17 +12,17 @@ $( document ).ready(function() {
                 
                success : function(response){ 
                     console.log(typeof(response)); 
-                     var input = document.getElementById("number").value;
+                     var input = document.getElementById("number").value; //to get input value
                     for (i=1 ;i<=input;i++){ 
                        
                        $(".well").append( i + ").&nbsp&nbsp" + "Story:" + response.data[i].story + "<br>" + "Message:" + response.data[i].message + "<br>" 
                                 +  "Created-time:"  + response.data[i].created_time + "<br>" + "Id:" + response.data[i].id + "<br>") 
                            
-                           } 
+                           } //for loop totake data from facebook
                     
                 }, 
                      error : function(request,errorType,errorMessage){ 
-                        alert("please scheck your console for further details");
+                        alert("Please check your console for further details");
                         console.log(request); 
                         console.log(errorType); 
                         alert(errorMessage); 
