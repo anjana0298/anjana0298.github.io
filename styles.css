@@ -10,7 +10,7 @@ body {
 
 .jumbotron
 {
- text-decoration: underline;
+ text-decoration: none;
  color: teal;
  font-size: 2em;
 }
